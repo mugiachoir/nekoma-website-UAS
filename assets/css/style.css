@@ -1,0 +1,1041 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 245, 255);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  position: relative;
+  display: grid;
+}
+
+.hilangkan {
+  opacity: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* HERO SECTION/HEADER */
+
+header {
+  background-image: url(../img/hero.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-y: -110px;
+  padding: 100px 50px;
+}
+
+header .hero-words {
+  color: white;
+  width: 50%;
+}
+
+header .hero-words h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+header .hero-words a {
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+header .hero-words a.regist {
+  background-color: #ffe600;
+  color: rgb(0, 0, 50);
+  border: 3px solid #ffe600;
+  margin-right: 5px;
+}
+
+header .hero-words a.regist:hover {
+  font-weight: bold;
+  background-color: #ffcc00;
+  border: 3px solid #ffcc00;
+}
+
+header .hero-words a.learn {
+  background-color: none;
+  color: #ffe600;
+  border: 3px solid #ffe600;
+}
+
+header .hero-words a.learn:hover {
+  font-weight: bold;
+  color: #ffcc00;
+  border: 5px solid #ffcc00;
+}
+
+/* AKHIR HEADER */
+
+/* NAVBAR */
+nav {
+  background-color: rgb(0, 0, 50);
+  display: flex;
+  color: white;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+nav .logo {
+  margin-left: 10px;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+}
+
+nav .logo a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+nav ul li a {
+  color: rgb(180, 180, 180);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: white;
+  font-weight: bolder;
+}
+
+.menu-toggle {
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 28px;
+  background-color: rgb(180, 180, 180);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(1) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(3) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle .topburger {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle .midburger {
+  background-color: white;
+  transform: scale(0);
+}
+
+.menu-toggle .bottomburger {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+/* AKHIR NAVBAR */
+
+/* MAIN */
+main {
+  display: grid;
+  grid-template-columns: 0.7fr 4fr 1fr;
+  grid-template-areas: "asidekiri content asidekanan";
+  gap: 10px;
+  margin-top: 40px;
+  padding: 0px 50px;
+  transition: 1s;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.8),
+    12px 12px 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgb(247, 247, 255);
+}
+
+/* CONTENT */
+.content {
+  grid-area: content;
+  padding: 0px 40px;
+}
+
+article {
+  padding: 25px;
+}
+
+article h2 {
+  margin-bottom: 20px;
+}
+
+article p {
+  opacity: 0.8;
+}
+
+marquee.art-devider {
+  color: #ffe600;
+  margin-bottom: 20px;
+  margin-top: -2px;
+}
+
+marquee.art-devider:nth-of-type(odd) {
+  margin-top: 20px;
+  margin-bottom: -2px;
+  color: rgb(0, 0, 50);
+}
+
+.service-item {
+  background-size: cover;
+  background-clip: border-box;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.service-item:nth-child(even) {
+  align-items: flex-end;
+  text-align: end;
+  color: rgb(0, 0, 100);
+}
+
+.service-item p {
+  width: 50%;
+  opacity: 0.8;
+}
+
+.service-item:nth-child(odd) {
+  color: white;
+}
+
+.service-item:nth-child(1) {
+  background-image: url(../img/latihan.jpg);
+}
+
+.service-item:nth-child(2) {
+  background-image: url(../img/video.jpg);
+}
+
+.service-item:nth-child(3) {
+  background-image: url(../img/privat.jpg);
+}
+
+.service-item:nth-child(4) {
+  background-image: url(../img/berita.jpg);
+}
+
+.service-item:nth-child(5) {
+  background-image: url(../img/camp.jpg);
+}
+
+.service-item:nth-child(6) {
+  background-image: url(../img/konsultasi.jpg);
+}
+
+.service-item a {
+  color: #ffe600;
+  font-weight: bold;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+.service-item a:hover {
+  color: #ffcc00;
+  font-size: 1.2em;
+}
+
+.service-item:nth-child(even) a {
+  color: rgb(0, 0, 100);
+}
+
+.service-item:nth-child(even) a:hover {
+  color: rgb(0, 0, 200);
+}
+
+.content .product {
+  padding: 0px;
+  border-radius: 0px;
+}
+
+hr {
+  opacity: 0.7;
+  width: 60%;
+  margin: 10px auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-fill {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+.flex-fill img {
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 0 100px 0 100px;
+}
+
+.flex-fill img:hover {
+  opacity: 1;
+}
+
+.content .gambar {
+  height: 300px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 30px;
+}
+
+.content .gambar.latihan {
+  background-image: url(../img/latihan.jpg);
+}
+
+.content .gambar.video {
+  background-image: url(../img/video2.jpg);
+}
+
+.content .gambar.privat {
+  background-image: url(../img/privat.jpg);
+}
+
+.content .gambar.berita {
+  background-image: url(../img/berita2.jpg);
+}
+
+.content .gambar.konsultasi {
+  background-image: url(../img/konsultasi2.jpg);
+}
+
+.content .gambar.camp {
+  background-image: url(../img/camp.jpg);
+}
+
+.content .gambar h1 {
+  width: 50%;
+}
+
+.content .ket-service {
+  text-align: end;
+  padding: 30px;
+}
+
+.content .ket-service h2 {
+  margin-bottom: 20px;
+}
+
+.content .ket-service h2,
+.content .ket-service p {
+  text-align: left;
+}
+
+.content .ket-service table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.content .ket-service table th,
+.content .ket-service table td {
+  padding: 10px;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.content .ket-service table td li {
+  margin-left: 25px;
+}
+
+.content .ket-service a {
+  padding: 5px 20px;
+  margin-top: 20px;
+  background-color: #ffe600;
+  color: rgb(0, 0, 50);
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.content .ket-service a:hover {
+  background-color: #ffcc00;
+  font-weight: bold;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-check {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+form .input-box {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+form .input-box:focus {
+  border: 2px solid rgba(0, 0, 200, 0.5);
+  outline: none;
+}
+
+form .form-item label:first-child {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form .form-item {
+  margin-bottom: 20px;
+}
+
+form .form-item .input-check {
+  margin-right: 5px;
+}
+
+form .form-item .form-inline label {
+  opacity: 0.8;
+}
+
+form section.data-pribadi,
+form section.data-pendaftar {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: -5px -5px 5px 0 rgba(255, 255, 255, 0.8),
+    5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgb(247, 247, 255);
+  text-align: start;
+}
+
+article form h2 {
+  text-align: start;
+}
+
+form input.button {
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: fit-content;
+  margin-right: 5px;
+  cursor: pointer;
+  border: 2px solid #ffe600;
+  background-color: rgb(247, 247, 255);
+  color: #ffcc00;
+  box-shadow: -5px -5px 5px 0 rgba(255, 255, 255, 0.8),
+    5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+form input.button.submit {
+  color: rgb(0, 0, 50);
+  background-color: #ffe600;
+}
+
+form input.button.submit:hover {
+  background-color: #ffcc00;
+  border: 2px solid #ffcc00;
+  font-weight: bold;
+}
+
+form input.button.reset:hover {
+  border: 3px solid #ffcc00;
+  font-weight: bold;
+}
+
+.content .checkout table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.content .checkout table th,
+.content .checkout table td {
+  padding: 10px;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.checkout h4,
+.checkout p {
+  color: red;
+  opacity: 0.8;
+}
+
+.checkout .welcome-message {
+  background-color: palegreen;
+  color: green;
+  text-align: center;
+}
+
+/* GALLERY */
+
+.content article .container {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+}
+
+.content article .container .jumbo {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.content article .container .thumbnail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.content article .container .thumbnail img {
+  width: 100%;
+}
+
+.content article .container .thumbnail .thumb:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.active {
+  opacity: 50%;
+}
+
+/* ABOUT */
+.content article.about ul li {
+  margin-left: 20px;
+}
+
+/* CONTACT */
+.contact table {
+  margin-bottom: 30px;
+}
+
+.contact table td {
+  padding: 10px;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.contact table td a {
+  text-decoration: none;
+  color: rgb(0, 0, 200);
+}
+
+.contact table td a:hover {
+  font-weight: bold;
+}
+
+/* AKHIR CONTENT */
+
+/* ASIDE KIRI */
+.aside1 {
+  grid-area: asidekiri;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside1 .music {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+.aside1 .music a {
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: -5px -5px 5px 0 rgba(0, 0, 255, 0.1),
+    5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aside1 .music a.stop {
+  background-color: #ffe600;
+  color: rgb(0, 0, 50);
+  border: 3px solid #ffe600;
+}
+
+.aside1 .music a.stop:hover {
+  font-weight: bold;
+  background-color: #ffcc00;
+  border: 3px solid #ffcc00;
+}
+
+.aside1 .music a.play {
+  background-color: #f8f8f8;
+  color: #ffcc00;
+  border: 3px solid #ffe600;
+}
+
+.aside1 .music a.play:hover {
+  font-weight: bold;
+  border: 5px solid #ffcc00;
+}
+
+.aside1 .contain-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.aside1 .contain-side div img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+/* AKHIR ASIDE KIRI */
+/* ASIDE KANAN */
+.aside2 {
+  grid-area: asidekanan;
+  background-color: rgb(0, 0, 50);
+  height: fit-content;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.aside2 .news {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.aside2 a div {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.aside2 a div.news-item {
+  display: grid;
+  align-items: end;
+  width: 100%;
+  color: rgb(180, 180, 180);
+}
+
+.aside2 a div.news-item:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.aside2 a div.news-item p {
+  background-color: rgba(10, 10, 10, 60%);
+  height: 40%;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.aside2 div.news-item {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.aside2 div.news-item.pertama {
+  background-image: url(../img/galeri4.jpg);
+}
+
+.aside2 div.news-item.kedua {
+  background-image: url(../img/galeri6.jpg);
+}
+
+.aside2 div.news-item.ketiga {
+  background-image: url(../img/galeri2.jpg);
+}
+
+/* AKHIR ASIDE KANAN */
+/* AKHIR MAIN */
+
+/* FOOTER */
+footer {
+  background-color: rgb(0, 0, 50);
+  color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+footer a {
+  margin-right: 20px;
+}
+
+footer a img {
+  width: 30px;
+}
+
+/* AKHIR FOOTER */
+
+/* RESPONSIVE BREAKPOINT */
+/* NOTEBOOK */
+@media screen and (max-width: 1170px) {
+  header {
+    background-position-x: -300px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-container.reverse {
+    flex-direction: column-reverse;
+  }
+
+  /* ASIDE KIRI */
+  .aside1 .music {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 5px 0px;
+    row-gap: 20px;
+    font-size: 0.8em;
+  }
+
+  .aside1 .music a.play,
+  .aside1 .music a.stop {
+    padding: 3px 20px;
+    margin: 10px auto;
+  }
+
+  .aside1 .contain-side {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0px;
+    width: 100%;
+  }
+
+  .aside1 .contain-side div img {
+    margin: 0px auto;
+    width: 80%;
+  }
+
+  /* AKHIR ASIDE KIRI */
+  /* ASIDE KANAN */
+  .aside2 a div.news-item p {
+    height: 50%;
+  }
+
+  /* AKHIR ASIDE KANAN */
+}
+
+/* IPAD */
+@media screen and (max-width: 870px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  header {
+    background-position-x: -500px;
+    padding: 50px 50px;
+  }
+
+  header .hero-words {
+    color: white;
+    width: 80%;
+  }
+
+  nav {
+    order: -1;
+  }
+
+  nav ul {
+    width: 50%;
+  }
+
+  main {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+      "asidekiri content"
+      "asidekiri content"
+      "asidekanan asidekanan";
+    padding: 0px;
+  }
+
+  .content {
+    margin-right: 20px;
+  }
+
+  .content article .container {
+    position: relative;
+    display: inline;
+  }
+
+  .content article .container .jumbo {
+    position: sticky;
+    top: 0;
+    bottom: 5;
+    z-index: 1;
+  }
+
+  .content article .container .thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aside1 {
+    margin-left: 20px;
+  }
+
+  footer {
+    margin-top: 5px;
+  }
+
+  /* ASIDE KANAN */
+  .aside2 {
+    border-radius: 0px;
+  }
+
+  .aside2 a {
+    width: 70%;
+  }
+
+  .aside2 a div.news-item {
+    width: 100%;
+  }
+
+  .aside2 a div.news-item p {
+    font-size: 1em;
+  }
+
+  .aside2 .news::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aside2 .news {
+    scrollbar-width: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .aside2 .news a {
+    flex: 0 0 auto;
+    margin: 0px 10px;
+  }
+
+  /* AKHIR ASIDE KANAN */
+}
+
+@media screen and (max-width: 770px) {
+  header {
+    background-image: url(../img/hero2.jpg);
+    background-position-x: inherit;
+    background-position-y: -300px;
+    padding: 50px 50px;
+  }
+}
+
+/* Ukuran Mobille */
+@media screen and (max-width: 600px) {
+  header {
+    background-position-x: inherit;
+    background-position-y: -100px;
+  }
+
+  header .hero-words {
+    width: 90%;
+  }
+
+  /* NAVBAR */
+  nav {
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(0, 0, 50);
+    z-index: 90;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 1s;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav ul li:hover {
+    background-color: rgb(0, 0, 100);
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "asidekiri"
+      "content"
+      "asidekanan";
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0px;
+  }
+
+  .content {
+    margin: 0px 0px;
+  }
+
+  .service-item p {
+    width: 70%;
+  }
+
+  /* ASIDE KIRI */
+  .aside1 .contain-side::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aside1 .contain-side {
+    scrollbar-width: none;
+  }
+
+  .aside1 .music {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+  }
+
+  .aside1 .music a.play {
+    position: relative;
+    right: 58px;
+  }
+
+  .aside1 .music a.stop {
+    position: relative;
+    left: 58px;
+  }
+
+  .aside1 .contain-side {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .aside1 .contain-side .item-overflow {
+    flex: 0 0 auto;
+    margin: 0px -30px;
+  }
+
+  .aside1 .contain-side div img {
+    margin: 0px auto;
+    width: 50%;
+  }
+
+  /* AKHIR ASIDE KIRI */
+  /* FOOTER */
+  footer a img {
+    width: 20px;
+  }
+
+  /* AKHIR FOOTER */
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    background-position-x: -100px;
+  }
+
+  header .hero-words {
+    width: 100%;
+  }
+}
