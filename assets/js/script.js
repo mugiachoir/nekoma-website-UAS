@@ -279,7 +279,6 @@ const subInterval = setInterval(() => {
       let middle = "";
       let libero = "";
       const posisi = new Array();
-
       if (document.formulir.setter.checked == true) {
         setter = document.formulir.setter.value;
         posisi.push(setter);
@@ -307,30 +306,36 @@ const subInterval = setInterval(() => {
       let camp = "";
       let konsultasi = "";
       const program = new Array();
-
+      let harga = 0;
       if (document.formulir.latihan.checked == true) {
         latihan = document.formulir.latihan.value;
         program.push(latihan);
+        harga += 400000;
       }
       if (document.formulir.privat.checked == true) {
         privat = document.formulir.privat.value;
         program.push(privat);
+        harga += 400000;
       }
       if (document.formulir.berita.checked == true) {
         berita = document.formulir.berita.value;
         program.push(berita);
+        harga += 50000;
       }
       if (document.formulir.video.checked == true) {
         video = document.formulir.video.value;
         program.push(video);
+        harga += 150000;
       }
       if (document.formulir.camp.checked == true) {
         camp = document.formulir.camp.value;
         program.push(camp);
+        harga += 500000;
       }
       if (document.formulir.konsultasi.checked == true) {
         konsultasi = document.formulir.konsultasi.value;
         program.push(konsultasi);
+        harga += 50000;
       }
       const transfer = document.getElementById("transfer");
       const cash = document.getElementById("cash");
@@ -344,10 +349,10 @@ const subInterval = setInterval(() => {
       let message = "";
       if (metode == "Transfer") {
         message =
-          "<h4>Silahkan Melakukan Pembayaran Ke: 90390031862 (BTPN)</h4><p>Registrasi akan berhasil setelah pembayaran dilakukan.</p>";
+          `<h4>Tagihan anda Sebesar: Rp. ${harga}</h4><h4>Silahkan Melakukan Pembayaran Ke: 90390031862 (BTPN)</h4><p>Registrasi akan berhasil setelah pembayaran dilakukan.</p>`;
       } else {
         message =
-          "<h4>Silahkan Melakukan Pembayaran Ke: Kantor Operasional (Jl.Tengah Cicadas Ds.Cicadas No.14 Sagalaherang-Subang 41282)</h4><p>Registrasi akan berhasil setelah pembayaran dilakukan.</p>";
+          `<h4>Tagihan anda Sebesar: Rp. ${harga}</h4><h4>Silahkan Melakukan Pembayaran Ke: Kantor Operasional (Jl.Tengah Cicadas Ds.Cicadas No.14 Sagalaherang-Subang 41282)</h4><p>Registrasi akan berhasil setelah pembayaran dilakukan.</p>`;
       }
       const content = document.querySelector("body main .content");
       content.innerHTML = `
@@ -394,4 +399,4 @@ const subInterval = setInterval(() => {
       event.preventDefault();
     });
   }
-}, 5000);
+}, 3000);
