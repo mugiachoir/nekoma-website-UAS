@@ -15,7 +15,7 @@ function renderKonsultasi() {
         <table>
           <tr>
             <th>Harga</th>
-            <td>Rp.50.000</td>
+            <td>Rp.50.000/sesi</td>
           </tr>
           <tr>
             <th>Fasilitas</th>
